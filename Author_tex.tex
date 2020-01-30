@@ -129,7 +129,7 @@ This process yielded a final dataset of 823 records, 773 of which are unique tax
 
 \subsection{Phylogenetic data}
 We used PyPHLAWD to retrieve sequence clusters and used clusters which had at least 100 species for our analysis \cite{smith2018phyphlawd}. 
-These included three mitochondrial genes (COI, COX2 and ND4) and three nuclear regions (18s and two regions of the 28s gene). 
+These included three mitochondrial genes (COI, COX2 and ND4) and three nuclear regions (\textcolor{red}{\st{18s}} \textcolor{blue}{18S} and two regions of the \textcolor{red}{\st{28s}} \textcolor{blue}{28S} gene). 
 We removed duplicate sequences and retained the longest example for each species using the function FastaFilter in the R package evobiR \cite{blackmon2015evobir}.
 To maximise the overlap between our trait and sequence datasets we first found all species-level exact matches in both datasets.
 Next, we looked for genera level matches that lacked species level matches.
@@ -164,7 +164,7 @@ However, the parthenogenetic mode of reproduction is only present in Phasmatodea
 Therefore we built a second phylogeny, for Phasmatodea, that included more species from our trait dataset.
 To do this we supplemented the sequence data from PyPHLAWD with additional data located using the PhyLoTA web server \cite{sanderson2008}.
 This increased our samples from 28 species, which we had in Polyneoptera dataset, to 41 species. 
-This new dataset included three mitochondrial genes (16s, COI, COX2) and three nuclear genes (18s, 28s and H3).
+This new dataset included three mitochondrial genes (16s, COI, COX2) and three nuclear genes (\textcolor{red}{\st{18s}} \textcolor{blue}{18S}, \textcolor{red}{\st{28s}} \textcolor{blue}{28S} and H3).
 The new alignment consisted of 57\% missing data.
 We inferred time-calibrated phylogenies as described above.
 
