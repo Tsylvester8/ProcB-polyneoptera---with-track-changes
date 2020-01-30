@@ -132,8 +132,8 @@ We used PyPHLAWD to retrieve sequence clusters and used clusters which had at le
 These included three mitochondrial genes (COI, COX2 and ND4) and three nuclear regions (\textcolor{red}{\st{18s}} \textcolor{blue}{18S} and two regions of the \textcolor{red}{\st{28s}} \textcolor{blue}{28S} gene). 
 We removed duplicate sequences and retained the longest example for each species using the function FastaFilter in the R package evobiR \cite{blackmon2015evobir}.
 To maximise the overlap between our trait and sequence datasets we first found all species-level exact matches in both datasets.
-Next, we looked for genera level matches that lacked species level matches.
-For each of these genus level matches, we retained the longest sequence for each locus from any species in the genus and used these sequences to act as a tip representing the genus rather than any single species. 
+Next, we looked for \textcolor{red}{\st{genera level}} \textcolor{blue}{genus-level} matches that lacked \textcolor{red}{\st{species level}} \textcolor{blue}{species-level} matches.
+For each of these \textcolor{red}{\st{genus level}} \textcolor{blue}{genus-level} matches, we retained the longest sequence for each locus from any species in the genus and used these sequences to act as a tip representing the genus rather than any single species. 
 This process of maximising the overlap between the two datasets created 57 exemplar taxa (genera tips).
 
 We used MAFFT under default settings to align all sequences \cite{katoh2013mafft}.
@@ -224,7 +224,7 @@ Of the 16 genera with both XO and XY species, 94\% (16/17) show a lower mean chr
 However, we find support for both fusions and fissions leading to transitions from XY to multi-XY.
 While 43\% (3/7) of the genera with both XY and multi-XY have a higher mean autosome number in multi-XY species, 57\% (4/7) of the genera with both XY and multi-XY have a higher mean autosome number in XY species.
 This analysis is limited to only those genera with variation in SCSs and thus omits much of our data.
-When autosome number among orders is parsed by SCS, differences suggests that in some groups the origin of transitions may differ from our genus level analysis.
+When autosome number among orders is parsed by SCS, differences suggests that in some groups the origin of transitions may differ from our \textcolor{red}{\st{genus level}} \textcolor{blue}{genus-level} analysis.
 For instance, the mean of all XY species in both Blattodea (including Isoptera) and Dermaptera is higher than the mean of XO species in both orders.
 This pattern is not expected if fusions are the primary source of transitions from XO to XY in these groups (Figure S2).
 
