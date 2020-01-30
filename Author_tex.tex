@@ -186,6 +186,8 @@ We tested for differences in rates of chromosome evolution by comparing the 95\%
 Rates were inferred with branch lengths transformed to make trees unit length.
 However, all rates reported have been back-transformed so they represent transition rates in units of millions of years.
 
+\textcolor{blue}{The ChromPlus model that we use here to model chromosome number evolution can also be used to look at the impact of binary states (i.e. states that can be classified as 1 and 0) on chromosome number evolution \cite{blackmon2019meiotic}. We used this capability of the ChromPlus model to asses the impact on mode of reproduction on chromosome number evolution. In this analysis we used the second phylogeny we inferred for Phasmatodea and ran an MCMC es explained above. We used sexual reproduction and parthenogenesis as our binary states.}
+
 We also tested whether genome size as a proxy for repetitive content might explain the rate differences that we observed among orders \cite{kidwell2002transposable,bennetzen2005mechanisms}.
 Genome size data for all available species in Polyneoptera were downloaded from the animal genome size database \cite{gregory2019}.
 When multiple values for a single species were present the mean of each species was used.
@@ -202,7 +204,7 @@ The estimate of ancestral states for SCSs was done using a Markov model in the f
 We classified multi-XY SCS as XY which resulted in two states (XO and XY) for the ancestral states reconstruction of the SCS. 
 Our model allowed for transitions between XO and XY to occur at unequal rates.
 To estimate the number of transitions in SCSs, we created the same model and performed stochastic mappings in the R package phytools \cite{revell2012phytools}.
-Data and all R code for analyses are provided in a GitHub repository: https://github.com/Tsylvester8/Polyneoptera. 
+Data and all R code for analyses are provided in a GitHub repository: https://github.com/Tsylvester8/Polyneoptera. \textcolor{blue}{The karyotype data can also be found in the Polyneoptera karyotype database at https://evobir.shinyapps.io/PolyneopteraDB/}
 
 %%%%%%%%%%%%%
 %% Results %%
