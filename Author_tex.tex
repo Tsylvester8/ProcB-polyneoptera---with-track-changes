@@ -188,8 +188,11 @@ However, all rates reported have been back-transformed so they represent transit
 
 \textcolor{blue}{The ChromPlus model that we use here to model chromosome number evolution can also be used to look at the impact of binary states (i.e. states that can be classified as 1 and 0) on chromosome number evolution \cite{blackmon2019meiotic}. We used this capability of the ChromPlus model to asses the impact on mode of reproduction on chromosome number evolution. In this analysis we used the second phylogeny we inferred for Phasmatodea and ran an MCMC es explained above. We used sexual reproduction and parthenogenesis as our binary states.}
 
-We also tested whether genome size as a proxy for repetitive content might explain the rate differences that we observed among orders \cite{kidwell2002transposable,bennetzen2005mechanisms}.
-Genome size data for all available species in Polyneoptera were downloaded from the animal genome size database \cite{gregory2019}.
+We also tested whether genome size as a proxy for repetitive content might explain the rate differences that we observed among orders \cite{kidwell2002transposable,bennetzen2005mechanisms}. 
+\textcolor{blue}{Expansions in genome size are largely due to repetitive content, especially transposable elements.}
+\textcolor{blue}{We hypothesis that presence of repetetive content allows structural changes in the geome such as fusions and/or fissions and therefore we expect to see higher rates of fusions and/or fissions in larger genomes.}
+\textcolor{blue}{To test this, we downloaded }
+\textcolor{red}{\st{Genome }} \textcolor{blue}{genome} size data for all available species in Polyneoptera \textcolor{red}{\st{were downloaded}} from the animal genome size database \cite{gregory2019}.
 When multiple values for a single species were present the mean of each species was used.
 We then fit three linear models to test whether the mean genome size for an order predicted the mean rate estimate for chromosome gains, losses, and polyploidy. 
 Linear models were fit using the R function lm from base R \cite{R-citation}.
@@ -266,6 +269,7 @@ Mean genome size of these orders ranged from a low of 1.23 Gbp in Isoptera to a 
 We fit three linear models where the mean \textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} (gains, losses, and polyploidy) were a function of the mean genome size of an order.
 None of these linear models was significant (all p-values $>$ 0.15 without correction for multiple comparisons).
 Furthermore, some of the very lowest rates were observed in Orthoptera which had the largest mean genome size.
+\textcolor{blue}{In our comparison between genome size and chromosome number, we did not find any significant relationship as well (p values both before and after correcting for phylogeny were > 0.05) (Figure SX).}
 
 \subsection{Chromosome Number Ancestral state reconstruction}
 In reporting ancestral chromosome number in each order, we averaged probabilities across all 100 trees from the posterior distribution. 
