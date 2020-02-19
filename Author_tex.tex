@@ -98,7 +98,9 @@ It has been hypothesized that this pattern is driven by the size of the region a
 However, in some species, this may be averted by cell cycle checkpoints that lead to apoptosis of cells that fail to properly segregate the sex chromosomes \cite{dumont2017par}.
 
 In sexual species, it is often assumed that changes in chromosome number are underdominant--heterozygotes have reduced fitness \cite{white1973} . 
-Chromosomal heterozygosity occurs when the chromosome \textcolor{red}{\st{compliment}} \textcolor{blue}{complement} from the parents differs.
+Chromosomal heterozygosity occurs when the chromosome
+% TS: changed compliment to complement. - reply for R2.2
+\textcolor{red}{\st{compliment}} \textcolor{blue}{complement} from the parents differs.
 For instance, if one parent contributes a single fused chromosome and the other contributes two separate chromosomes.
 Perhaps the most widely known example of this is hybridisation between horses and donkeys where the offspring carries 32 chromosomes from the mother and 31 chromosomes from the father. 
 When this mule attempts to produce gametes the rearrangements that have occurred lead to gametes lacking a full set of all genes in the genome and thus, they are sterile \cite{wodsedalek1916}. 
@@ -129,9 +131,12 @@ This process yielded a final dataset of 823 records, 773 of which are unique tax
 
 \subsection{Phylogenetic data}
 We used PyPHLAWD to retrieve sequence clusters and used clusters which had at least 100 species for our analysis \cite{smith2018phyphlawd}. 
-These included three mitochondrial genes (COI, COX2 and ND4) and three nuclear regions (\textcolor{red}{\st{18s}} \textcolor{blue}{18S} and two regions of the \textcolor{red}{\st{28s}} \textcolor{blue}{28S} gene). 
+These included three mitochondrial genes (COI, COX2 and ND4) and three nuclear
+% TS: changed 18s and 28s to 18S and 28S - reply for R1.2
+regions (\textcolor{red}{\st{18s}} \textcolor{blue}{18S} and two regions of the \textcolor{red}{\st{28s}} \textcolor{blue}{28S} gene). 
 We removed duplicate sequences and retained the longest example for each species using the function FastaFilter in the R package evobiR \cite{blackmon2015evobir}.
 To maximise the overlap between our trait and sequence datasets we first found all species-level exact matches in both datasets.
+% TS: changed genera level and genus level to genus-level and species level to species-level - reply for R2.4
 Next, we looked for \textcolor{red}{\st{genera level}} \textcolor{blue}{genus-level} matches that lacked \textcolor{red}{\st{species level}} \textcolor{blue}{species-level} matches.
 For each of these \textcolor{red}{\st{genus level}} \textcolor{blue}{genus-level} matches, we retained the longest sequence for each locus from any species in the genus and used these sequences to act as a tip representing the genus rather than any single species. 
 This process of maximising the overlap between the two datasets created 57 exemplar taxa (genera tips).
@@ -164,7 +169,9 @@ However, the parthenogenetic mode of reproduction is only present in Phasmatodea
 Therefore we built a second phylogeny, for Phasmatodea, that included more species from our trait dataset.
 To do this we supplemented the sequence data from PyPHLAWD with additional data located using the PhyLoTA web server \cite{sanderson2008}.
 This increased our samples from 28 species, which we had in Polyneoptera dataset, to 41 species. 
-This new dataset included three mitochondrial genes (16s, COI, COX2) and three nuclear genes (\textcolor{red}{\st{18s}} \textcolor{blue}{18S}, \textcolor{red}{\st{28s}} \textcolor{blue}{28S} and H3).
+This new dataset included three mitochondrial genes (16s, COI, COX2) and three
+% TS: changed 18s and 28s to 18S and 28S - reply for R1.2
+nuclear genes (\textcolor{red}{\st{18s}} \textcolor{blue}{18S}, \textcolor{red}{\st{28s}} \textcolor{blue}{28S} and H3).
 The new alignment consisted of 57\% missing data.
 We inferred time-calibrated phylogenies as described above.
 
@@ -186,9 +193,11 @@ We tested for differences in rates of chromosome evolution by comparing the 95\%
 Rates were inferred with branch lengths transformed to make trees unit length.
 However, all rates reported have been back-transformed so they represent transition rates in units of millions of years.
 
+% TS: added a paragraph to state that the ChromPlus model that we used can incorporate binary traits and see the impact on these binary traits on chromosome number evolution. - reply for R1.3
 \textcolor{blue}{The ChromPlus model that we use here to model chromosome number evolution can also be used to look at the impact of binary states (i.e. states that can be classified as 1 and 0) on chromosome number evolution \cite{blackmon2019meiotic}. We used this capability of the ChromPlus model to asses the impact on mode of reproduction on chromosome number evolution. In this analysis we used the second phylogeny we inferred for Phasmatodea and ran an MCMC es explained above. We used sexual reproduction and parthenogenesis as our binary states.}
 
 We also tested whether genome size as a proxy for repetitive content might explain the rate differences that we observed among orders \cite{kidwell2002transposable,bennetzen2005mechanisms}. 
+% TS: added a section to further clarify that below mentioned analysis looks at the variation of genome size that we see between these orders could explain the rates of chromosome number evolution of these orders. - reply for R1.3
 \textcolor{blue}{Expansions in genome size are largely due to repetitive content, especially transposable elements.}
 \textcolor{blue}{We hypothesis that presence of repetetive content allows structural changes in the geome such as fusions and/or fissions and therefore we expect to see higher rates of fusions and/or fissions in larger genomes.}
 \textcolor{blue}{To test this, we downloaded }
@@ -196,6 +205,7 @@ We also tested whether genome size as a proxy for repetitive content might expla
 When multiple values for a single species were present the mean of each species was used.
 We then fit three linear models to test whether the mean genome size for an order predicted the mean rate estimate for chromosome gains, losses, and polyploidy. 
 Linear models were fit using the R function lm from base R \cite{R-citation}.
+% TS: added a section on the correlation between the genome size and chromosome number. - reply for editors comment on the power of our analysis on genome size and rate of chromosome number evolution.
 \textcolor{blue}{We have also tested whether there is a correlation between the genome size and the chromosome number as well.}
 \textcolor{blue}{We used the lm function in base R to construct a liner model without correcting for phylogeny and the function phylolm in the package phylolm to construct a linear model with the phylogenetic correction \cite{R-citation, phylolm}.}
 
@@ -209,7 +219,9 @@ The estimate of ancestral states for SCSs was done using a Markov model in the f
 We classified multi-XY SCS as XY which resulted in two states (XO and XY) for the ancestral states reconstruction of the SCS. 
 Our model allowed for transitions between XO and XY to occur at unequal rates.
 To estimate the number of transitions in SCSs, we created the same model and performed stochastic mappings in the R package phytools \cite{revell2012phytools}.
-Data and all R code for analyses are provided in a GitHub repository: https://github.com/Tsylvester8/Polyneoptera. \textcolor{blue}{The karyotype data can also be found in the Polyneoptera karyotype database at https://evobir.shinyapps.io/PolyneopteraDB/}
+Data and all R code for analyses are provided in a GitHub repository: https://github.com/Tsylvester8/Polyneoptera. 
+% TS: added a sentence to talk about the polyneoptera karyotype database - reply for R1.7
+\textcolor{blue}{The karyotype data can also be found in the Polyneoptera karyotype database at https://evobir.shinyapps.io/PolyneopteraDB/}
 
 %%%%%%%%%%%%%
 %% Results %%
@@ -229,7 +241,9 @@ Of the 16 genera with both XO and XY species, 94\% (16/17) show a lower mean chr
 However, we find support for both fusions and fissions leading to transitions from XY to multi-XY.
 While 43\% (3/7) of the genera with both XY and multi-XY have a higher mean autosome number in multi-XY species, 57\% (4/7) of the genera with both XY and multi-XY have a higher mean autosome number in XY species.
 This analysis is limited to only those genera with variation in SCSs and thus omits much of our data.
-When autosome number among orders is parsed by SCS, differences suggests that in some groups the origin of transitions may differ from our \textcolor{red}{\st{genus level}} \textcolor{blue}{genus-level} analysis.
+When autosome number among orders is parsed by SCS, differences suggests that in some groups the origin of transitions may differ from our
+% TS: changed genera level and genus level to genus-level and species level to species-level - reply for R2.4
+\textcolor{red}{\st{genus level}} \textcolor{blue}{genus-level} analysis.
 For instance, the mean of all XY species in both Blattodea (including Isoptera) and Dermaptera is higher than the mean of XO species in both orders.
 This pattern is not expected if fusions are the primary source of transitions from XO to XY in these groups (Figure S2).
 
@@ -258,7 +272,9 @@ All orders showed some support for the model including polyploidy and overall, 7
 For this reason, all analyses were done with a model that had fusions, fissions, and polyploidy.
 In Blattodea (including Isoptera), we estimate a mean fusion rate of 0.128, a fission rate of 0.150, and a polyploidy rate of 0.003 (Table S3).
 In contrast, if we remove the subclade Isoptera from Blattodea we find that parameter estimates increase to 0.420, 0.385, and 0.004 for fusions, fissions and polyploidy respectively.
-This is consistent with rate estimates for Isoptera in isolation, where we infer a mean fusion rate of 0.044, a fission rate of \textcolor{red}{\st{0.063 and a polyploidy rate}} \textcolor{blue}{0.063, and a polyploidy rate} of 0.003.
+This is consistent with rate estimates for Isoptera in isolation, where we infer
+% TS: added a comma after 0.063 - reply for R2.7
+a mean fusion rate of 0.044, a fission rate of \textcolor{red}{\st{0.063 and a polyploidy rate}} \textcolor{blue}{0.063, and a polyploidy rate} of 0.003.
 In Mantodea, we estimate a mean fusion rate of 0.142, a fission rate of 0.056, and a polyploidy rate of 0.139.
 Mantodea rate estimates also exhibited high uncertainty, overlapping rate estimates in most orders for most parameters (Fig. \ref{fig:order.rates.95HPD}, Figure S3).
 In Phasmatodea, we estimate a mean fusion rate of 0.47, a fission rate of 0.145, and a polyploidy rate of 0.039.
@@ -266,9 +282,11 @@ Some of the lowest rates we estimated were in Orthoptera where the fusion rate w
 
 Genome size data were available for 123 Polyneoptera species in the orders Phasmatodea, Orthoptera, Mantodea, and Blattodea (including Isoptera).
 Mean genome size of these orders ranged from a low of 1.23 Gbp in Isoptera to a high of 7.92 Gbp in Orthoptera (Table S4).
+% TS: changed rate of chromosome evolution to rate of chromosome number evolution. - reply for R1.8
 We fit three linear models where the mean \textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} (gains, losses, and polyploidy) were a function of the mean genome size of an order.
 None of these linear models was significant (all p-values $>$ 0.15 without correction for multiple comparisons).
 Furthermore, some of the very lowest rates were observed in Orthoptera which had the largest mean genome size.
+% TS: added the results on the correlation between the genome size and the chromosome number. - reply for editors comment on the power of our analysis on genome size and rate of chromosome number evolution.
 \textcolor{blue}{In our comparison between genome size and chromosome number, we did not find any significant relationship as well (p values both before and after correcting for phylogeny were > 0.05) (Figure SX).}
 
 \subsection{Chromosome Number Ancestral state reconstruction}
@@ -276,6 +294,7 @@ In reporting ancestral chromosome number in each order, we averaged probabilitie
 Our analysis of Orthoptera suggests six is the most probable ancestral state for the order, with a 75.1\% probability.
 However, a chromosome number of three is given a probability of 24.5\% which may suggest an early whole-genome duplication in this clade.
 Support for the lower ancestral state was concentrated in 19 trees where the most probable state was 3 in all other trees 6 was given the highest probability (Figure S4).
+% TS: All the edits in this section of the results (Chromosome Number Ancestral state reconstruction) are the addition of the mean chromosome number for the orders where we inferred the ancestral chromosome number in each order. - reply for R1.11
 \textcolor{blue}{The most common chromosome number in Orthoptera in our dataset was 12.}
 In Blattodea including Isoptera, the most probable chromosome number was 13 with a probability of 20.9\% followed by 14 and 12 with probabilities 19.5\% and 16.4\% respectively. 
 \textcolor{blue}{The most common chromosome number in Blattodea including Isoptera in our dataset was 21.}
@@ -305,12 +324,15 @@ Despite this, we are only beginning to understand how chromosome number evolves.
 In this study, we have focused on the dynamics of chromosome evolution in Polyneoptera. 
 Our analyses have revealed that this clade originated from an XO ancestor. 
 We find that fusions have led to many new XY and multi-XY systems, and that only a few instances of fissions producing multi-XY systems appear to have occurred.
+% TS: changed rate of chromosome evolution to rate of chromosome number evolution. - reply for R1.8
 We see a rapid decline in the \textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} that coincides with the origin of eusocial Blattodea (Isoptera).
 This is the opposite of the pattern documented in Hymenoptera \cite{ross2015}.
 In Phasmatodea, we find that transitions into parthenogenetic reproduction allow for a high rate of polyploidy but no significant increase in rates of dysploidy.
 
 \subsection{Sex chromosomes and chromosomes number evolution}
-The transition between SCSs from XO to XY can occur through X chromosome autosome fusions or by sex chromosome turnover with fixation of the ancestral X as a new autosome\textcolor{blue}{\cite{charlesworth1980, white1973}}.
+The transition between SCSs from XO to XY can occur through X chromosome autosome fusions or by sex chromosome turnover with fixation of the ancestral X
+% TS: added citations. reply for R2.9
+as a new autosome\textcolor{blue}{\cite{charlesworth1980, white1973}}.
 Transition via fusion will lead to a reduction in the total number of autosomes, while turnover should lead to an increase in the total number of autosomes.
 The data that we have collected shows a clear pattern of reduced autosome number in taxa with recent XO to XY transitions (Table \ref{tab:fusions}).
 Transition from XY to multi-XY can occur through sex chromosome autosome fusions or by sex chromosome fission.
@@ -327,10 +349,13 @@ In our inference of SCS evolution, we performed stochastic mappings that allow u
 The rate of Y chromosome gains and Y chromosome losses are both approximately 0.002 (Table S5). 
 However, we find that Y chromosome gains are more common with a mean of 15.3 while losses are relatively rare with a mean of 6.7. 
 This pattern is intuitive when we consider that the ancestor of this group was likely XO and thus there has been relatively little time for the gain of the Y chromosome to then be followed by its decay and loss.
+% TS: added information on the support for common origin of the XO sex chromosome system in Polyneoptera. - reply for R2.8
 \textcolor{blue}{Additionally, coupled with the evidence that X chromosome of German cockroach, \textit{Blattella germanica} (Blattodea), is highly conserved over 400 million years we suggest that the X chromosome in Polyneoptera species with XO sex chromosome system had a common origin \cite{meisel2019x}.}
 
 \subsection{Eusociality and chromosome number}
-In our analysis of Blattodea (including Isoptera), we inferred a significantly lower \textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} in the subclade Isoptera than the rest of Blattodea (excluding Isoptera).
+In our analysis of Blattodea (including Isoptera), we inferred a significantly
+% TS: changed rate of chromosome evolution to rate of chromosome number evolution. - reply for R1.8
+lower \textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} in the subclade Isoptera than the rest of Blattodea (excluding Isoptera).
 In the past, it has been hypothesised that large rate differences, for instance, those seen among some mammal clades might be explained by differences in effective population size \cite{bush1977rapid}.
 Future work that examined effective population sizes of solitary Blattodea (excluding Isoptera) and eusocial Isoptera might reveal whether the observed rate differences in these lineages is consistent with this earlier hypothesis that large effective population size is associated with lower rates of chromosome evolution.
 It should be noted though that more recent phylogenetically informed analysis of over 1000 species of mammals showed that female meiotic drive may be a primary driver of chromosome number evolution in mammals \cite{blackmon2019meiotic}.
@@ -348,7 +373,9 @@ However, these processes (fusion, fission, whole genome duplication, and aneuplo
 In both sexual and asexual species chromosome increase due to aneuploidy may be rare due to the impact of aneuploidy on dosage which may lead to stoichiometric imbalances in gene networks with interacting products on different chromosomes.
 However, asexually reproducing species should be immune from the problem of proper segregation since they cannot outcross to an individual with a different chromosome complement. 
 
-For these reasons, we expected to see a higher rate of chromosome number increase and decrease in asexual species since difficulties in mating with individuals with different chromosome \textcolor{red}{\st{compliments}} \textcolor{blue}{complements} would be relaxed.
+For these reasons, we expected to see a higher rate of chromosome number increase and decrease in asexual species since difficulties in mating with
+% TS: changed compliment to complement. - reply for R2.2
+individuals with different chromosome \textcolor{red}{\st{compliments}} \textcolor{blue}{complements} would be relaxed.
 Our Phasmatodea dataset has a mean of 9.3 transitions from sexual to asexual reproduction and offers a chance to test this hypothesis (Table S6).
 To our surprise, our analysis illustrates that rates of chromosome increase and decrease are equal in sexual and asexual Phasmatodea (Fig. \ref{fig:phas.plot}).
 We interpret this as evidence that the constraints on chromosome number change via fusions, fissions, and aneuploidy are largely similar in these two groups. 
@@ -373,7 +400,9 @@ If transposable elements have expanded in the genomes of a clade, we might expec
 However, we found no significant association between genome size and rates of chromosome evolution suggesting that repetitive content is not a driving force in the stability of large scale genome structure across Polyneoptera.
 Moving forward, the recent development of multiple probabilistic models of chromosome evolution that allow for associations with speciation or binary characters offers a way forward to further tease apart the determinants of rates of chromosome evolution \cite{freyman2018, zenil2018chromploid, blackmon2019meiotic}
 
-Taken as a whole our results illustrate that changes in the \textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} are widespread across large taxonomic groups.
+Taken as a whole our results illustrate that changes in the
+% TS: changed rate of chromosome evolution to rate of chromosome number evolution. - reply for R1.8
+\textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} are widespread across large taxonomic groups.
 This has important implications for our understanding of speciation processes.
 For instance, while many chromosomal speciation models \cite{baker1986, white} have been thought to be unimportant in recent times, it may be that in groups like Blattodea (excluding Isoptera) with high rates of chromosomal evolution, these models may be an important source of extant diversity.
 More broadly, depending on the importance of epistatic relationships, the reorganisation of the genome through fusions and fissions may be important in determining the ability of organisms to adapt to novel environments.
