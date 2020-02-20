@@ -210,6 +210,8 @@ Linear models were fit using the R function lm from base R \cite{R-citation}.
 \textcolor{blue}{We used the lm function in base R to construct a liner model without correcting for phylogeny and the function phylolm in the package phylolm to construct a linear model with the phylogenetic correction \cite{R-citation, phylolm}.}
 
 \subsection{Ancestral state reconstructions}
+% TS: added recap on the traits on which we inferred the ancestral states. - reply for R1.6
+\textcolor{blue}{We estimated the ancestral states of two traits; chromosome number and the sex chromosome system (SCS).}
 We estimated the ancestral states of the chromosome number at the root of each orders using ChromEvol v 2.0. \cite{glick2014chromevol, mayrose2009chromevol}.
 We used a fixed parameter model which included chromosome gains, losses, and whole-genome duplication---matching the model used in ChromePlus.
 For each tree from our posterior distribution, we took the mean of each parameter estimate from the corresponding post-burnin portion of the ChromPlus analysis described above and supplied these to infer ancestral states in ChromEvol.
