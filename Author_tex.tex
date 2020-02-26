@@ -196,7 +196,7 @@ However, all rates reported have been back-transformed so they represent transit
 \textcolor{blue}{All these rates that we describe hererin are the lambda parameters of the exponential distributions inferred from our Markov model (described above) that describe the waiting time for a transition to occur.}
 
 % TS: added a paragraph to state that the ChromPlus model that we used can incorporate binary traits and see the impact on these binary traits on chromosome number evolution. - reply for R1.4
-\textcolor{blue}{The ChromPlus model that we use here to model chromosome number evolution can also be used to look at the impact of binary states (i.e. states that can be classified as 1 and 0) on chromosome number evolution \cite{blackmon2019meiotic}. We used this capability of the ChromPlus model to asses the impact on mode of reproduction on chromosome number evolution. In this analysis we used the second phylogeny we inferred for Phasmatodea and ran an MCMC es explained above. We used sexual reproduction and parthenogenesis as our binary states.}
+\textcolor{blue}{When compared with similar models of chromosome number evolution (e.g. ChromEvol), the ChromPlus model that we use here to model chromosome number evolution can also be used to look at the impact of binary states (i.e. states that can be classified as 1 and 0) on chromosome number evolution \cite{blackmon2019meiotic}. We used this capability of the ChromPlus model to asses the impact on mode of reproduction on chromosome number evolution. In this analysis we used the second phylogeny we inferred for Phasmatodea and ran an MCMC es explained above. We used sexual reproduction and parthenogenesis as our binary states.}
 
 We also tested whether genome size as a proxy for repetitive content might explain the rate differences that we observed among orders \cite{kidwell2002transposable,bennetzen2005mechanisms}. 
 % TS: added a section to further clarify that below mentioned analysis looks at the variation of genome size that we see between these orders could explain the rates of chromosome number evolution of these orders. - reply for R1.3
@@ -208,7 +208,8 @@ When multiple values for a single species were present the mean of each species 
 We then fit three linear models to test whether the mean genome size for an order predicted the mean rate estimate for chromosome gains, losses, and polyploidy. 
 Linear models were fit using the R function lm from base R \cite{R-citation}.
 % TS: added a section on the correlation between the genome size and chromosome number. - reply for editors comment on the power of our analysis on genome size and rate of chromosome number evolution.
-\textcolor{blue}{We have also tested whether there is a correlation between the genome size and the chromosome number as well.}
+\textcolor{blue}{We have also tested whether there is a correlation between the genome size and the chromosome number as well.
+When we have multiple records for genome size for a given species we used the mean value. Once we looked at species-level matches, to increase the overlap between the genome size dataset and the chromosome dataset, we looked at genera-level matches as well. For these chimeric taxa, genome size and chromosome number were randomly sampled.}
 \textcolor{blue}{We used the lm function in base R to construct a liner model without correcting for phylogeny and the function phylolm in the package phylolm to construct a linear model with the phylogenetic correction \cite{R-citation, phylolm}.}
 
 \subsection{Ancestral state reconstructions}
@@ -382,9 +383,12 @@ For these reasons, we expected to see a higher rate of chromosome number increas
 individuals with different chromosome \textcolor{red}{\st{compliments}} \textcolor{blue}{complements} would be relaxed.
 Our Phasmatodea dataset has a mean of 9.3 transitions from sexual to asexual reproduction and offers a chance to test this hypothesis (Table S6).
 To our surprise, our analysis illustrates that rates of chromosome increase and decrease are equal in sexual and asexual Phasmatodea (Fig. \ref{fig:phas.plot}).
-We interpret this as evidence that the constraints on chromosome number change via fusions, fissions, and aneuploidy are largely similar in these two groups. 
+We interpret this as evidence that the constraints on chromosome number change via fusions, fissions, and aneuploidy are largely similar in these two groups.
 The most parsimonious explanation seems to be that the changes observed are largely neutral and that individuals that are heterozygous for chromosomal rearrangements do not typically have difficulty properly segregating chromosomes during meiosis.
 In contrast, the constraints on polyploidy appear to be lifted in asexual lineages suggesting these changes may be deleterious in sexual species but neutral or nearly neutral in asexual species.
+% TS: added sentence to discuss aneuploidy in Polyneoptera. - reply for R1.9 and R210
+\textcolor{blue}{It must be noted that we do not find any evidence for aneuploidy in Phasmatodea. 
+In fact, we do not find intraspecific aneuploidy reported for any of the clades used in this study.In finding aneuploid species/strains, individual level sampling and using molecular methods for increased accuracy in karyotyping (e.g. florescence in situ hybridisation) has been proposed elsewhere \cite{liehr2017new}.}
 
 \subsection{Variation in rates of chromosome number evolution}
 Most studies of chromosome evolution have been done in isolation on small clades \cite{rockman2002, mccann2016, deoliveira}. 
@@ -402,8 +406,35 @@ One possible explanation for variation in rates of chromosome evolution is funda
 For instance, large numbers or recent expansions of transposable elements may lead to more frequent chromosome breakage or other structural rearrangements that change chromosome number \cite{carbone2014gibbon}.
 If transposable elements have expanded in the genomes of a clade, we might expect to see a signature of this in increased genome sizes \cite{kidwell2002transposable}.
 However, we found no significant association between genome size and rates of chromosome evolution suggesting that repetitive content is not a driving force in the stability of large scale genome structure across Polyneoptera.
-Moving forward, the recent development of multiple probabilistic models of chromosome evolution that allow for associations with speciation or binary characters offers a way forward to further tease apart the determinants of rates of chromosome evolution \cite{freyman2018, zenil2018chromploid, blackmon2019meiotic}
+% TS: added information in the linear models on chromosome number vs genome size
+\textcolor{blue}{However, one caveat of the above analysis is that it is extremely under-powered. 
+We conducted a power analysis for the three linear models.
+The power of the three linear models were reported as XX\%, XX\%, and XX\% respectivly for fusions, fissions and polyploidy. 
+Therefore, we looked at whether the chromosome numbers in Polyneoptera can explain the variation in genome size that we see in this clade.
+We looked at this relationship between chromosome number and genome size with and without correcting for phylogeny and our results show that once corrected for phylogeny, chromosome numbers in this clade fails to explain the variation in genome size that we see in Polyneoptera.}
+Moving forward, the recent development of multiple probabilistic models of chromosome evolution that allow for associations with speciation or binary characters offers a way forward to further tease apart the determinants of rates of chromosome evolution \cite{freyman2018, zenil2018chromploid, blackmon2019meiotic}.
 
+% TS: added sentence on finding information using genomic data. - reply for R1.12
+\textcolor{blue}{In addition, the lack of genomic sequences in this clade precludes robust comparative genomic analyses on the scale that is possible with chromosome number which highlight the need to sample additional genomes.
+We think that Blattodea (including Isoptera) would be an informative target as we see many differences in chromosome number evolution within that clade.}
+
+% TS: added a new section which compares our results to previous hypothesis
+\subsection{\textcolor{blue}{How our results stack against previous predictions}}
+\textcolor{blue}{We find that many of our results confirm previous hypotheses on chromosome number evolution and sex chromosome system evolution in Polyneoptera while some of our results contradicts previous hypotheses.
+In many instances our inference on the ancestral state of the sex chromosome system matches with what is predicted for that order. For instance, in Mantodea, Orthoptera and Phasmatodea it has been hypothesized that the ancestral state of the sex chromosome system as being XO and our results confirm these hypotheses \cite{hughes1950chromosomes,blackmon2016, blackman1995sex}. 
+Additionally, in Dermaptera, it has been proposed that the ancestral state of the sex chromosome system as being XY, which is also confirmed by our results \cite{blackman1995sex}.
+However, while it has been hypothesized that the most recent ancestor of Blattodea (including Isoptera) as being XY and the Y chromosome being rapidly lost in Blattodea (excluding Isoptera), our results show that the most recent common ancestor of Blattodea (including Isoptera) was in fact XO (with a probability of XX\%) \cite{luykx1990cytogenetic,bergamaschi2007karyology}.
+Also, in Isoptera, while it has been hypothesised that the ancestral sex chromosome system as being XO, despite the fact that primitive Isoptera having XY sex chromosome system, our results suggests that ancestral sex chromosome system of Isopteara was in fact XY (with a probability of XX\%) \cite{luykx1990cytogenetic,blackman1995sex}.}
+ 
+\textcolor{blue}{Although we do not find many predictions about the processes that govern chromosome number evolution for majority of the orders in Polyneoptera, we do find some instances where such processes are hypothesiesd.
+For instance, in Isoptera, it has been previously hypothesized that fusions are more common than fissions \cite{luykx1990cytogenetic,bergamaschi2007karyology}.
+Although we do not find a significant difference between the rates of fusion and rates of fission (Table S3), in our ancestral state analysis for chromosome number, we find that on average number of fusion events are high than number of fission events (on average 33.32 fusion events and 21.94 fission events).} 
+
+\textcolor{blue}{Unfortunately, our results on ancestral states of the chromosome number does not stack well against previous predictions.
+For instance, in Mantodea, we inferred that 8 being the most probable chromosome number and 7 as being the second most probable chromosome number of the ancestor (with probabilities 41.2\% and 19.2\%). However, our predictions does not come close to the previously predicted ancestral chromosome number which is 14 \cite{hughes1950chromosomes}. 
+In many instances, the most common number in a given clade is identified as its ancestral chromosome number.
+However, most our inferences on the ancestral state of the chromosome number are further away from that of the predicted ancestral chromosome number for a given clade except for Isoptera (where the mode of the dataset was 21 while the ancestral chromosome number was estimated as 20 with a probaboloty of 35.6\%). These results on the inference of ancestral states for chromosome number suggests that we need much broader level sampling of the extant species to get accurate estimation of the ancestral states.}
+ 
 Taken as a whole our results illustrate that changes in the
 % TS: changed rate of chromosome evolution to rate of chromosome number evolution. - reply for R1.8
 \textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} are widespread across large taxonomic groups.
@@ -484,7 +515,9 @@ Dermaptera  & \textit{Nala}            & -    & 17.5 & 15    & +      & - \\
 Dermaptera  & \textit{Nesogaster}      & 10   & -    & 7     & +      & - \\
 Plecoptera  & \textit{Perla}           & 9.5  & 4    & 11.7  & +      & + \\ \hline
 \end{tabular}
-\caption{Chromosome number and sex chromosome systems. In each genus, we report the mean number of autosomes for all species having each type of sex chromosome systems. The fusion and fission columns contain a + to indicate a difference of chromosome number that is consistent with either fusions or fissions. A - symbol indicates a distribution of chromosome number that is uninformative or does not support a given mechanism.}
+\caption{Chromosome number and sex chromosome systems. In each genus, we report the mean number of autosomes for all species having each type of sex chromosome systems. The fusion and fission columns contain a
+% TS: added terms positive and negative to avoid any confusion. reply for R2.12
+\textcolor{blue}{positive symbol} \textcolor{red}{\st{+}} \textcolor{blue}{(+)} to indicate a difference of chromosome number that is consistent with either fusions or fissions. A \textcolor{blue}{negative symbol} \textcolor{red}{\st{-}} \textcolor{blue}{(-)} symbol indicates a distribution of chromosome number that is uninformative or does not support a given mechanism.}
 \label{tab:fusions}
 \end{table}
 
@@ -813,6 +846,11 @@ Ohno S.
 White MJD.
  Chain processes in chromosomal speciation.
  Systematic Biology. 1978;27(3):285--298.
+ 
+ \bibitem{liehr2017new}
+Liehr T, Buleu O, Karamysheva T, Bugrov A, Rubtsov N.
+ New insights into phasmatodea chromosomes.
+Genes. 2017;8(11):327.
 
 \bibitem{rockman2002}
 Rockman MV, Rowell DM.
@@ -864,6 +902,29 @@ Zenil-Ferguson R, Burleigh JG, Ponciano JM.
  chromploid: An R package for chromosome number evolution across the
   plant tree of life.
  Applications in plant sciences. 2018;6(3).
+ 
+ \bibitem{hughes1950chromosomes}
+Hughes-Schrader S.
+ The chromosomes of mantids (Orthoptera: Manteidae) in relation to
+  taxonomy.
+ Chromosoma. 1950;4(1):1--55.
+
+\bibitem{blackman1995sex}
+Blackman RL, Leather S, Hardie J.
+ Sex determination in insects.
+ Insect Reproduction. 1995;p. 57--94.
+
+\bibitem{luykx1990cytogenetic}
+Luykx P.
+ A cytogenetic survey of 25 species of lower termites from Australia.
+Genome. 1990;33(1):80--88.
+
+\bibitem{bergamaschi2007karyology}
+Bergamaschi S, Dawes-Gromadzki TZ, Scali V, Marini M, Mantovani B.
+ Karyology, mitochondrial DNA and the phylogeny of Australian
+  termites.
+Chromosome Research. 2007;15(6):735.
+
 
 \bibitem{baker1986}
 Baker RJ, Bickham JW.
