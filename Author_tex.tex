@@ -217,8 +217,8 @@ Tissue was ground gently with a Kontes ‘loose’ A pestle approximately 10-15 
 Samples were run to assure at least 1,000 nuclei under each 2C peak.
 To test whether the mean genome size for an order predicted the mean rate estimate for chromosome gains, losses, and polyploidy a linear model was fit using the R function lm \cite{R-citation}.
 To test whether genome size for species predicted chromosome number we created two linear models. 
-The first, using all available data (N=XXXX) was not phylogenetically corrected, and was fit with the lm function in R.
-The second, used the subset of data which could be mapped to our phylogeny (N=XXXX), and was fit with the phylolm function in the package phylolm which allows us to account for phylogenetic history \cite{R-citation, phylolm}.}
+The first, using all available data (N=53) was not phylogenetically corrected, and was fit with the lm function in R.
+The second, used the subset of data which could be mapped to our phylogeny (N=19), and was fit with the phylolm function in the package phylolm which allows us to account for phylogenetic history \cite{R-citation, phylolm}.}
 
 \subsection{Ancestral state reconstructions}
 % TS: added recap on the traits on which we inferred the ancestral states. - reply for R1.6
@@ -293,7 +293,9 @@ Mantodea rate estimates also exhibited high uncertainty, overlapping rate estima
 In Phasmatodea, we estimate a mean fusion rate of 0.47, a fission rate of 0.145, and a polyploidy rate of 0.039.
 Some of the lowest rates we estimated were in Orthoptera where the fusion rate was 0.003 and the fission rate was 0.024. However, we do find the polyploidy rate to be relatively high with a mean rate of 0.101.
 
-Genome size data were available for 123 Polyneoptera species in the orders Phasmatodea, Orthoptera, Mantodea, and Blattodea (including Isoptera).
+% TS: new section on genome size
+\subsection{Chromosome number evolution vs genome size}
+Genome size data were available for 123 Polyneoptera species in the orders Phasmatodea, Orthoptera, Mantodea, and Blattodea (including Isoptera) in the genome size data base. We added additional 60 new genome size estimates to this existing dataset. These new estimates are now reported in Table Sxxx.
 Mean genome size of these orders ranged from a low of 1.23 Gbp in Isoptera to a high of 7.92 Gbp in Orthoptera (Table S4).
 % TS: changed rate of chromosome evolution to rate of chromosome number evolution. - reply for R1.8
 We fit three linear models where the mean \textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} (gains, losses, and polyploidy) were a function of the mean genome size of an order.
@@ -315,7 +317,7 @@ In Mantodea \textcolor{blue}{modal chromosome number 14)}, the most probable chr
 Finally, in Phasmatodea \textcolor{blue}{modal chromosome number 18)}, the most probable chromosome number was 9 with a probability of 11.7\% followed by 10 and 11 with probabilities 11.3\% and 10.7\% respectively.
 \textcolor{blue}{All chromosome numbers reported here are haploid counts.}
 
-\subsection{Asexuality and rates of chromosome evolution}
+\subsection{Asexuality and rates of chromosome number evolution}
 Our dataset contains 13 parthenogenetic species.
 All these species were within Phasmatodea.
 Using our expanded Phasmatodea phylogenies we tested whether the rates of chromosome evolution are contingent on the reproductive mode (Figure S5).
@@ -416,8 +418,8 @@ We looked at this relationship between chromosome number and genome size with an
 Moving forward, the recent development of multiple probabilistic models of chromosome evolution that allow for associations with speciation or binary characters offers a way forward to further tease apart the determinants of rates of chromosome evolution \cite{freyman2018, zenil2018chromploid, blackmon2019meiotic}.
 
 % TS: added sentence on finding information using genomic data. - reply for R1.12
-\textcolor{blue}{In addition, the lack of genomic sequences in this clade precludes robust comparative genomic analyses on the scale that is possible with chromosome number which highlight the need to sample additional genomes.
-We think that Blattodea (including Isoptera) would be an informative target as we see many differences in chromosome number evolution within that clade.}
+% \textcolor{blue}{In addition, the lack of genomic sequences in this clade precludes robust comparative genomic analyses on the scale that is possible with chromosome number which highlight the need to sample additional genomes.
+% We think that Blattodea (including Isoptera) would be an informative target as we see many differences in chromosome number evolution within that clade.}
 
 % TS: added a new section which compares our results to previous hypothesis
 \subsection{\textcolor{blue}{Reconciling a century of chromosome research}}
@@ -433,7 +435,7 @@ For instance, in Isoptera, it has been previously hypothesized that fusions are 
 Although we do not find a significant difference between the rates of fusion and rates of fission (Table S3), in our ancestral state analysis for chromosome number, we find that the average number of fusion events are higher than number of fission events (33.32 fusion events and 21.94 fission events).} 
 
 \textcolor{blue}{The area that our results depart most strongly from previous work is in estimates of ancestral states.
-For instance, in Mantodea, we inferred 8 and 7 as the most probable ancestral haploid number for the group while previous work predicted ancestral haploid number of 14 \cite{hughes1950chromosomes}. }
+For instance, in Mantodea, we inferred 8 and 7 as the most probable ancestral haploid number for the group while previous work predicted ancestral haploid number of 14 \cite{hughes1950chromosomes}.}
 
 \textcolor{red}{FIND AND ADD MORE PREVIOUS ANCESTRAL STATE ESTIMATES WITH COMPARISONS TO OUR OWN.}
 
