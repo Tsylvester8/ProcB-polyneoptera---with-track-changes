@@ -5,7 +5,7 @@
 %%%
 
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
-\ProvidesClass{rsproca}
+\ProvidesClass{rsos}
               [2005/12/01 v1.1
  Standard LaTeX document class]
 
