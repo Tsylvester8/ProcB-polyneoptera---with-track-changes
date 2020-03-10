@@ -22,8 +22,8 @@
 Terrence Sylvester$^{1}$, Carl E. Hjelmen$^{1}$, J. Spencer Johnston$^{2}$, and Heath Blackmon$^{1}$}
 
 %%%%%%%%% Insert author address here
-\address{$^{1}$Department of Biology; Texas A\&M University; College Station, TX 77843, USA}
-\address{$^{2}$Department of Entomology; Texas A\&M University; College Station, TX 77843, USA}
+\address{$^{1}$Department of Biology; Texas A\&M University; College Station, TX 77843, USA\\
+$^{2}$Department of Entomology; Texas A\&M University; College Station, TX 77843, USA}
 
 
 %%%% Subject entries to be placed here %%%%
@@ -60,9 +60,7 @@ It is also the first information collected about most genomes.
 In fact, the first chromosome counts were recorded prior to the development of the chromosome theory of inheritance \cite{flemming1882}.
 Despite this early start, consistent rules governing the evolution of chromosome number across large clades remain elusive.
 
-Changes in chromosome number can happen due to several mechanisms.
-We use the term fusion and fission to describe respectively a decrease or an increase of one in chromosome number.
-However, these terms are simplifications and may represent multiple processes at
+
 
 \end{fmtext}
 \end{internallinenumbers}
@@ -70,7 +68,9 @@ However, these terms are simplifications and may represent multiple processes at
 
 \maketitle
 
-the molecular level.
+Changes in chromosome number can happen due to several mechanisms.
+We use the term fusion and fission to describe respectively a decrease or an increase of one in chromosome number.
+However, these terms are simplifications and may represent multiple processes at the molecular level.
 Reduction in chromosome number can happen through Robertsonian translocations with the loss of nonessential DNA \cite{garagna1995}.
 Reductions can also happen through the fusion of two chromosomes at the telomeres followed by loss of one of the centromeres \cite{gordon2011mechanisms, miga2016}.
 In contrast, increases in chromosome number can occur due to simple chromosome fission in the centromere region \cite{moretti1984}.
@@ -440,9 +440,11 @@ For instance, in Mantodea, we inferred 8 and 7 as the most probable ancestral ha
 
 \textcolor{red}{FIND AND ADD MORE PREVIOUS ANCESTRAL STATE ESTIMATES WITH COMPARISONS TO OUR OWN.}
 
+In Orthoptera, we inferred 6 as the most probable ancestral haploid number while previous work predicted ancestral hapliod number of 12 \cite{white1973}.
+In Blattodea (excluding Isoptera), we inferred 7, 8 and 9 as the most probable ancestral haploid number. In Isoptera, we inferred 20 and 21 as the most probable ancestral haploid number. Due to the large variation in chromosome number in Blattodea (excluding Isoptera) and Isoptera, an ancestral karyotype has not been proposed \cite{white1976, bergamaschi2007karyology}. 
+Finally in Phasmatodea, we inferred 9 and 10 as the most probable ancestral haploid number while previous work predicted ancestral hapliod number of 18 \cite{hughes1959}.
 
-
-\subsection{Conclusion}
+\section{Conclusion}
 
 \textcolor{blue}{Our analyses and synthesis point to numerous clades that should be targeted with future whole genome sequencing projects. 
 For instance chromosome level genome assemblies of XY Orthopterans would be a powerful tool to discover whether the same chromosome are repeatedly co-opted into new XY systems.
@@ -498,7 +500,9 @@ Bars below the plot indicates the 95\% HPD interval}
 %% Tables %%
 %%%%%%%%%%%%
 \newpage
-\begin{table}[h!]
+\begin{table}[!ht]
+\small
+\centering
 \begin{tabular}{llcccccc}
 \hline
 \multirow{2}{*}{Order} &
@@ -531,9 +535,7 @@ Phasmatodea & \textit{Podacanthus (3)}     & 17   & 13   & fusion & 14   & -    
 Phasmatodea & \textit{Prisopus (2)}        & 24   & 13   & fusion & 14   & -     & -       \\
 Plecoptera  & \textit{Perla (7)}           & 9.5  & 4    & fusion & 5    & 12.8  & fission \\ \hline
 \end{tabular}
-\caption{Chromosome number and sex chromosome systems. In each genus, we report the mean number of autosomes for all species having each type of sex chromosome systems. The fusion and fission columns contain a
-% TS: added terms positive and negative to avoid any confusion. reply for R2.12
-\textcolor{blue}{positive symbol} \textcolor{red}{\st{+}} \textcolor{blue}{(+)} to indicate a difference of chromosome number that is consistent with either fusions or fissions. A \textcolor{blue}{negative symbol} \textcolor{red}{\st{-}} \textcolor{blue}{(-)} symbol indicates a distribution of chromosome number that is uninformative or does not support a given mechanism.}
+\caption{Chromosome number and sex chromosome systems. In each genus, we report the mean number of autosomes for all species having XO and XY sex chromosome systems and the mean number of chromosomes for all species having XY and complex sex chromosome systems. Evidence supports column states whether the given chromosome numbers supports fusion or fission as an important process in transition between these sex chromosome systems. Negative (-) symbol indicates a distribution of chromosome number that is uninformative or does not support a given mechanism.}
 \label{tab:fusions}
 \end{table}
 
@@ -542,12 +544,12 @@ Plecoptera  & \textit{Perla (7)}           & 9.5  & 4    & fusion & 5    & 12.8 
 \noindent 
 
 %%%%%%%%%% Insert bibliography here %%%%%%%%%%%%%%
-
-\begin{thebibliography}{9}
+\newpage
+\begin{thebibliography}{99}
 
 \bibitem{flemming1882}
 Flemming W. 
-Zellsubstanz, kern und zelltheilung. Leipzig, Germany: Vogel; 1882.
+ Zellsubstanz, kern und zelltheilung. Leipzig, Germany: Vogel; 1882.
 
 \bibitem{garagna1995}
 Garagna S, Broccoli D, Redi CA, Searle JB, Cooke HJ, Capanna E.
@@ -937,6 +939,16 @@ Bergamaschi S, Dawes-Gromadzki TZ, Scali V, Marini M, Mantovani B.
   termites.
 Chromosome Research. 2007;15(6):735.
 
+\bibitem{white1976}
+White M.
+\newblock Insecta 2. Blattodea, Mantodea, Isoptera, Grylloblattodea,
+  Phasmatodea, Dermaptera and Embioptera.
+\newblock Schweizerbart'sche Verlagsbuchhandlung; 1976.
+
+\bibitem{hughes1959}
+Hughes-Schrader S.
+ On the cytotaxonomy of phasmids (Phasmatodea).
+ Chromosoma. 1959;10(1-6):268--277.
 
 \bibitem{baker1986}
 Baker RJ, Bickham JW.
@@ -949,7 +961,6 @@ White MJD.
  Modes of speciation.
  San Francisco, USA: WH Freeman; 1978.
  
-
 \bibitem{hanrahan2011}
 Hanrahan SJ, Johnston JS. 2011. 
 New genome size estimates of 134 species of arthropods. Chromosome Research 19: 809-823.
