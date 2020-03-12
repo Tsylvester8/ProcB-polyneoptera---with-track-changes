@@ -156,11 +156,11 @@ To identify the presence of rogue taxa, we generated 100 maximum likelihood rapi
 Using these trees, we calculated the taxonomic instability index as implemented in Mesquite v 3.51 \cite{maddison2018mesquite}.
 When we examined taxonomic instability indices, we found that a score of 4870 was an inflexion point (Figure S1).
 We identified 16 taxa whose taxonomic instability index was higher and removed them from subsequent analysis.
-Our final alignment contained 232 taxonomic units with 73\% missing data.
+Our final alignment contained 232 taxonomic units with 73\% missing data (Accession numbers are provided in Table S2).
 
 We used BEAST v 2.5 \cite{bouckaert2014beast} to infer time-calibrated phylogenies under a relaxed lognormal clock, a birth-death model, and GTR + G as the nucleotide substitution model.
 The mitochondrial and nuclear coding genes were partitioned into all three coding positions. 
-We used previous estimates for the ages of seven nodes (Table S2) in our phylogeny drawn from a previous study of divergence times across insects \cite{misof2014phylogenomics}.
+We used previous estimates for the ages of seven nodes (Table S4) in our phylogeny drawn from a previous study of divergence times across insects \cite{misof2014phylogenomics}.
 For each of these calibration points, we used a normal distribution.
 The upper and lower bounds of the calibration points (95\textsuperscript{th} and 5\textsuperscript{th} percentiles respectively) were placed according to the confidence intervals as presented in Misof et al. \cite{misof2014phylogenomics}. 
 We conducted two independent runs, each for 100 million generations.
@@ -212,7 +212,7 @@ When multiple records for genome size for a species were available we used the m
 In the analysis of chromosome number and genome size we included genus level data where genome size and chromosome number were available for a genus but for different species within the genus.
 We downloaded genome size data for all available species in Polyneoptera from the animal genome size database \cite{gregory2019}.
 When multiple values for a single species were present the mean of each species was used.
-Existing data was supplemented with new genome size estimates performed on 60 polyneoptera species using the flow cytometric method as found in Johnston et al. 2019 \cite{johnston2019}. 
+Existing data was supplemented with new genome size estimates performed on 60 polyneoptera species using the flow cytometric method as found in Johnston et al. 2019 (Table S3) \cite{johnston2019}. 
 Briefly, neural tissue was dissected from each insect and placed into Galbraith buffer for co-preparation with the \textit{Periplaneta americana} standard (1C = 3,338 Mbp) \cite{hanrahan2011}.
 Tissue was ground gently with a Kontes ‘loose’ A pestle approximately 10-15 times before filtered through 41 micron filter.  Samples were stained for at least 30 minutes with 25µg/ml Propidium iodide before running through a Partec Cyflow SL 3 Flow cytometer with a 532 nm green laser. 
 Samples were run to assure at least 1,000 nuclei under each 2C peak.
@@ -284,7 +284,7 @@ We began with a base model that includes only fusions and fissions and compared 
 We repeated this likelihood ratio test on each of the 100 trees from our posterior distribution for each order.
 All orders showed some support for the model including polyploidy and overall, 77.6\% of our likelihood ratio tests supported the more complex model that included polyploidy.
 For this reason, all analyses were done with a model that had fusions, fissions, and polyploidy.
-In Blattodea (including Isoptera), we estimate a mean fusion rate of 0.128, a fission rate of 0.150, and a polyploidy rate of 0.003 (Table S3).
+In Blattodea (including Isoptera), we estimate a mean fusion rate of 0.128, a fission rate of 0.150, and a polyploidy rate of 0.003 (Table S5).
 In contrast, if we remove the subclade Isoptera from Blattodea we find that parameter estimates increase to 0.420, 0.385, and 0.004 for fusions, fissions and polyploidy respectively.
 This is consistent with rate estimates for Isoptera in isolation, where we infer
 % TS: added a comma after 0.063 - reply for R2.7
@@ -296,21 +296,21 @@ Some of the lowest rates we estimated were in Orthoptera where the fusion rate w
 
 % TS: new section on genome size
 \subsection{Chromosome number evolution vs genome size}
-Genome size data were available for 123 Polyneoptera species in the orders Phasmatodea, Orthoptera, Mantodea, and Blattodea (including Isoptera) in the genome size data base. We added additional 60 new genome size estimates to this existing dataset. These new estimates are now reported in Table Sxxx.
-Mean genome size of these orders ranged from a low of 1.23 Gbp in Isoptera to a high of 7.92 Gbp in Orthoptera (Table S4).
+Genome size data were available for 185 Polyneoptera species in the orders Phasmatodea, Orthoptera, Mantodea, and Blattodea (including Isoptera) in the genome size data base. We added additional 60 new genome size estimates to this existing dataset. These new estimates are now reported in Table S3.
+Mean genome size of these orders ranged from a low of 1.22 Gbp in Isoptera to a high of 9.98 Gbp in Orthoptera (Table S6).
 % TS: changed rate of chromosome evolution to rate of chromosome number evolution. - reply for R1.8
 We fit three linear models where the mean \textcolor{red}{\st{rate of chromosome evolution}} \textcolor{blue}{rate of chromosome number evolution} (gains, losses, and polyploidy) were a function of the mean genome size of an order.
 None of these linear models was significant (all p-values $>$ 0.15 without correction for multiple comparisons).
 Furthermore, some of the very lowest rates were observed in Orthoptera which had the largest mean genome size.
 % TS: added the results on the correlation between the genome size and the chromosome number. - reply for editors comment on the power of our analysis on genome size and rate of chromosome number evolution.
-\textcolor{blue}{In our comparison between genome size and chromosome number, we did not find any significant relationship as well (p values both before and after correcting for phylogeny were > 0.05) (Figure SX).}
+\textcolor{blue}{In our comparison between genome size and chromosome number, we did not find any significant relationship as well (p value after correcting for phylogeny was > 0.05) (Figure S4).}
 
 \subsection{Chromosome Number Ancestral state reconstruction}
 Prior to the application of probabilistic models of chromosome evolution the ancestral chromosome number was often assumed to be the most common chromosome number in extant species \cite{white1973}.
 In reporting ancestral chromosome number in each order, we averaged probabilities across all 100 trees from the posterior distribution. 
 Our analysis of Orthoptera \textcolor{blue}{(modal chromosome number 12)} suggests six is the most probable ancestral state for the order, with a 75.1\% probability.
 However, a chromosome number of three is given a probability of 24.5\% which may suggest an early whole-genome duplication in this clade.
-Support for the lower ancestral state was concentrated in 19 trees where the most probable state was 3 in all other trees 6 was given the highest probability (Figure S4).
+Support for the lower ancestral state was concentrated in 19 trees where the most probable state was 3 in all other trees 6 was given the highest probability (Figure S5).
 In Blattodea including Isoptera \textcolor{blue}{(modal  chromosome number 21)}, the most probable chromosome number was 13 with a probability of 20.9\% followed by 14 and 12 with probabilities 19.5\% and 16.4\% respectively. 
 In Blattodea excluding Isoptera \textcolor{blue}{(modal chromosome number 19)}, the most probable chromosome number was 7 with a probability of 11.9\% followed by 8 and 9 with probabilities 11.6\% and 11.2\% respectively.
 In Isoptera \textcolor{blue}{(modal chromosome number 21)}, the most probable chromosome number was 20 with a probability of 35.6\% followed by 21 and 22 with probabilities 30.7\% and 14.0\% respectively.
@@ -321,7 +321,7 @@ Finally, in Phasmatodea \textcolor{blue}{modal chromosome number 18)}, the most 
 \subsection{Asexuality and rates of chromosome number evolution}
 Our dataset contains 13 parthenogenetic species.
 All these species were within Phasmatodea.
-Using our expanded Phasmatodea phylogenies we tested whether the rates of chromosome evolution are contingent on the reproductive mode (Figure S5).
+Using our expanded Phasmatodea phylogenies we tested whether the rates of chromosome evolution are contingent on the reproductive mode (Figure S6).
 We found that there is no significant difference in the rates of chromosome fusion and fission between sexually and asexually reproducing species.
 However, we find that rates of polyploidy are significantly higher in asexually reproducing species than in sexually reproducing species (Fig. \ref{fig:phas.plot}).
 
@@ -357,7 +357,7 @@ Our assembled data can also help us understand the fate of the Y chromosomes.
 It has been suggested that Y chromosomes may be destined to decay and loss given the inevitability of mutation accumulation due to lack of recombination \cite{steinemann2005}.
 Alternatively, they may be retained through cycles of rejuvenation or even transitions into alternative forms of meiosis \cite{blackmon2015bioessay}.
 In our inference of SCS evolution, we performed stochastic mappings that allow us to estimate the rate of Y chromosome loss and the number of inferred losses in our dataset.
-The rate of Y chromosome gains and Y chromosome losses are both approximately 0.002 (Table S5). 
+The rate of Y chromosome gains and Y chromosome losses are both approximately 0.002 (Table S7). 
 However, we find that Y chromosome gains are more common with a mean of 15.3 while losses are relatively rare with a mean of 6.7. 
 This pattern is intuitive when we consider that the ancestor of this group was likely XO and thus there has been relatively little time for the gain of the Y chromosome to then be followed by its decay and loss.
 % TS: added information on the support for common origin of the XO sex chromosome system in Polyneoptera. - reply for R2.8
@@ -386,7 +386,7 @@ In both sexual and asexual species chromosome increase due to aneuploidy may be 
 \textcolor{blue}{Parsing the relative contribution of fissions and aneuploidy to increases in chromosome number is not possible with our dataset, but could be tested with cross species chromosome painting via fluorescence in situ hybridisation \cite{liehr2017new}.}
 However, asexually reproducing species should be immune from the problem of proper segregation since they cannot outcross to an individual with a different chromosome complement. 
 For these reasons, we expected to see a higher rate of chromosome number increase and decrease in asexual species since difficulties in mating with individuals with different chromosome \textcolor{red}{\st{compliments}} \textcolor{blue}{complements} would be relaxed.
-Our Phasmatodea dataset has a mean of 9.3 transitions from sexual to asexual reproduction and offers a chance to test this hypothesis (Table S6).
+Our Phasmatodea dataset has a mean of 9.3 transitions from sexual to asexual reproduction and offers a chance to test this hypothesis (Table S8).
 To our surprise, our analysis illustrates that rates of chromosome increase and decrease are equal in sexual and asexual Phasmatodea (Fig. \ref{fig:phas.plot}).
 We interpret this as evidence that the constraints on chromosome number change via fusions, fissions, and aneuploidy are largely similar in these two groups.
 The most parsimonious explanation seems to be that the changes observed are largely neutral and that individuals that are heterozygous for chromosomal rearrangements do not typically have difficulty properly segregating chromosomes during meiosis.
@@ -399,10 +399,10 @@ Most studies of chromosome evolution have been done in isolation on small clades
 This creates a challenge in understanding variation in rates of chromosome number evolution across the tree of life since rates are fundamentally influenced by the time constraints and branch lengths inferred in a study (but see: \cite{blackmon2019meiotic, zenil2017}).
 By inferring rates in four orders all using a common tree, we are able to make a more valid comparison among clades and determine whether some groups are evolving at significantly different rates.
 We found many examples of significantly different rates of chromosome evolution among orders.
-Blattodea (including or excluding Isoptera) have a higher rate of increases than Orthoptera (Table S3).
-Blattodea (excluding Isoptera) have a higher rate of decrease than Isoptera and Orthoptera  (Table S3).
-Decreases are also higher in Phasmatodea than Blattodea (including Isoptera), Isoptera, and Orthoptera  (Table S3).
-Polyploidy is higher in Orthoptera than Blattodea (including Isoptera) and, Phasmatodea is higher than Blattodea (including Isoptera)  (Table S3).
+Blattodea (including or excluding Isoptera) have a higher rate of increases than Orthoptera (Table S5).
+Blattodea (excluding Isoptera) have a higher rate of decrease than Isoptera and Orthoptera  (Table S5).
+Decreases are also higher in Phasmatodea than Blattodea (including Isoptera), Isoptera, and Orthoptera  (Table S5).
+Polyploidy is higher in Orthoptera than Blattodea (including Isoptera) and, Phasmatodea is higher than Blattodea (including Isoptera)  (Table S5).
 In line with existing evidence \cite{lokki1980polyploidy, blackmon2016} polyploidy is higher in asexual than sexual species (Fig. \ref{fig:phas.plot}).
 In most of these cases, it is unclear what leads to these significant differences in rates of chromosome number evolution.
 
@@ -433,7 +433,7 @@ In Isoptera, while it has been hypothesised that the ancestral sex chromosome sy
  
 \textcolor{blue}{Even without model based analyses some authors have suggested that fusions or fissions were more improtant in some groups.
 For instance, in Isoptera, it has been previously hypothesized that fusions are more common than fissions \cite{luykx1990cytogenetic,bergamaschi2007karyology}.
-Although we do not find a significant difference between the rates of fusion and rates of fission (Table S3), in our ancestral state analysis for chromosome number, we find that the average number of fusion events are higher than number of fission events (33.32 fusion events and 21.94 fission events).} 
+Although we do not find a significant difference between the rates of fusion and rates of fission (Table S5), in our ancestral state analysis for chromosome number, we find that the average number of fusion events are higher than number of fission events (33.32 fusion events and 21.94 fission events).} 
 
 \textcolor{blue}{The area that our results depart most strongly from previous work is in estimates of ancestral states.
 For instance, in Mantodea, we inferred 8 and 7 as the most probable ancestral haploid number for the group while previous work predicted ancestral haploid number of 14 \cite{hughes1950chromosomes}.}
@@ -508,9 +508,9 @@ Bars below the plot indicates the 95\% HPD interval}
 \multirow{2}{*}{Order} &
   \multirow{2}{*}{Genera} &
   \multicolumn{2}{c}{\begin{tabular}[c]{@{}c@{}}Mean number of \\ autosomes\end{tabular}} &
-  \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Evidence \\ supports\end{tabular}} &
+  \multirow{2}{*}{supports} &
   \multicolumn{2}{c}{\begin{tabular}[c]{@{}c@{}}Mean number of \\ chromosomes\end{tabular}} &
-  \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Evidence\\  supports\end{tabular}} \\ \cline{3-4} \cline{6-7}
+  \multirow{2}{*}{supports} \\ \cline{3-4} \cline{6-7}
             &                              & XO   & XY   &        & XY   & multi &         \\ \hline
 Dermaptera  & \textit{Forficula (14)}      & -    & 11   & -      & 12   & 12.8  & fission \\
 Dermaptera  & \textit{Nala (3)}            & -    & 17.5 & -      & 18.5 & 19    & fission \\
